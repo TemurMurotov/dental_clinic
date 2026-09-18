@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "services": "Services",
+    "beforeAfter": "Before/After",
+    "reviews": "Reviews",
+    "blog": "Blog",
+    "booking": "Book Appointment",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "common": {
+    "bookAppointment": "Book an Appointment",
+    "callNow": "Call Now",
+    "contactTelegram": "Contact via Telegram",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "close": "Close",
+    "sending": "Sending..."
+  },
+  "footer": {
+    "tagline": "Creating healthy and beautiful smiles",
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "workingHours": "Working Hours",
+    "followUs": "Follow Us",
+    "contactInfo": "Contact Info"
+  },
+  "hero": {
+    "eyebrow": "Modern Dental Clinic",
+    "headline": "Creating Healthy and Beautiful Smiles",
+    "subheadline": "Dr. Alisher Muratbayev and his team provide care using modern equipment, painless treatment methods, and an individual approach.",
+    "cta1": "Book an Appointment",
+    "cta2": "Contact via Telegram",
+    "cta3": "Call Now",
+    "statExperience": "years of experience",
+    "statPatients": "happy patients",
+    "statServices": "types of services"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Professional biography and experience",
+    "educationTitle": "Education and Qualifications",
+    "missionTitle": "Our Mission",
+    "certificatesTitle": "Certificates and Achievements",
+    "experienceLabel": "years of experience",
+    "patientsLabel": "happy patients"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete dental care with modern equipment and proven methods",
+    "benefitsTitle": "Benefits",
+    "processTitle": "Treatment Process",
+    "faqTitle": "Frequently Asked Questions",
+    "categoriesTitle": "Service Categories",
+    "allServices": "All Services",
+    "relatedServices": "Other Services"
+  },
+  "beforeAfter": {
+    "title": "Before & After",
+    "subtitle": "Real results from our patients",
+    "caseStudy": "Case Study"
+  },
+  "reviews": {
+    "title": "Patient Reviews",
+    "subtitle": "Genuine testimonials from patients who trust us",
+    "videoTitle": "Video Reviews",
+    "ratingLabel": "rating",
+    "trustTitle": "Why patients trust us"
+  },
+  "blog": {
+    "title": "Blog & Latest News",
+    "subtitle": "Latest news and helpful tips in dentistry",
+    "categoryLabel": "Category",
+    "publishedOn": "Published on",
+    "noPosts": "No articles yet",
+    "backToBlog": "Back to Blog"
+  },
+  "booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Fill out the form and we'll get back to you shortly",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email (optional)",
+    "service": "Service Type",
+    "selectService": "Select a service",
+    "date": "Date",
+    "time": "Time",
+    "message": "Additional Message (optional)",
+    "submit": "Book Appointment",
+    "success": "Your request has been received! We'll contact you shortly.",
+    "error": "Something went wrong, please try again."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? Write to us or give us a call",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Working Hours",
+    "formTitle": "Send a Message",
+    "namePlaceholder": "Your name",
+    "contactPlaceholder": "Phone or email",
+    "messagePlaceholder": "Your message",
+    "submit": "Send",
+    "success": "Your message has been sent, thank you!",
+    "mapPlaceholder": "Google Map will appear here soon"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to questions our patients ask most often"
+  },
+  "admin": {
+    "loginTitle": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "blogPosts": "Blog Posts",
+    "cases": "Patient Cases",
+    "appointments": "Appointment Requests",
+    "messages": "Contact Messages",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  }
+}

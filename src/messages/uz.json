@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "services": "Xizmatlar",
+    "beforeAfter": "Oldin/Keyin",
+    "reviews": "Sharhlar",
+    "blog": "Blog",
+    "booking": "Navbatga yozilish",
+    "contact": "Aloqa",
+    "faq": "Savol-javob"
+  },
+  "common": {
+    "bookAppointment": "Navbatga yozilish",
+    "callNow": "Qo'ng'iroq qilish",
+    "contactTelegram": "Telegram orqali yozish",
+    "readMore": "Batafsil",
+    "viewAll": "Barchasini ko'rish",
+    "submit": "Yuborish",
+    "loading": "Yuklanmoqda...",
+    "close": "Yopish",
+    "sending": "Yuborilmoqda..."
+  },
+  "footer": {
+    "tagline": "Sog'lom va chiroyli tabassumlar yaratamiz",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "quickLinks": "Tezkor havolalar",
+    "workingHours": "Ish vaqti",
+    "followUs": "Ijtimoiy tarmoqlarda",
+    "contactInfo": "Aloqa ma'lumotlari"
+  },
+  "hero": {
+    "eyebrow": "Zamonaviy stomatologiya klinikasi",
+    "headline": "Sog'lom va Chiroyli Tabassumlar Yaratamiz",
+    "subheadline": "Dr. Alisher Muratbayev va uning jamoasi zamonaviy uskunalar, og'riqsiz davolash usullari va individual yondashuv bilan sizga xizmat qiladi.",
+    "cta1": "Navbatga yozilish",
+    "cta2": "Telegram orqali yozish",
+    "cta3": "Qo'ng'iroq qilish",
+    "statExperience": "yillik tajriba",
+    "statPatients": "mamnun bemor",
+    "statServices": "turdagi xizmat"
+  },
+  "about": {
+    "title": "Men haqimda",
+    "subtitle": "Professional biografiya va tajriba",
+    "educationTitle": "Ta'lim va malaka",
+    "missionTitle": "Bizning missiyamiz",
+    "certificatesTitle": "Sertifikatlar va yutuqlar",
+    "experienceLabel": "yillik tajriba",
+    "patientsLabel": "mamnun bemor"
+  },
+  "services": {
+    "title": "Xizmatlarimiz",
+    "subtitle": "Zamonaviy uskunalar va isbotlangan usullar bilan to'liq stomatologik yordam",
+    "benefitsTitle": "Afzalliklari",
+    "processTitle": "Davolash jarayoni",
+    "faqTitle": "Ko'p so'raladigan savollar",
+    "categoriesTitle": "Xizmat turlari",
+    "allServices": "Barcha xizmatlar",
+    "relatedServices": "Boshqa xizmatlar"
+  },
+  "beforeAfter": {
+    "title": "Oldin va Keyin",
+    "subtitle": "Bemorlarimizning haqiqiy natijalari",
+    "caseStudy": "Amaliy holat"
+  },
+  "reviews": {
+    "title": "Bemorlar fikri",
+    "subtitle": "Bizga ishongan bemorlarimizning haqiqiy sharhlari",
+    "videoTitle": "Video sharhlar",
+    "ratingLabel": "reyting",
+    "trustTitle": "Nima uchun bizga ishonishadi"
+  },
+  "blog": {
+    "title": "Blog va yangiliklar",
+    "subtitle": "Stomatologiya sohasidagi so'nggi yangiliklar va foydali maslahatlar",
+    "categoryLabel": "Kategoriya",
+    "publishedOn": "Nashr qilingan",
+    "noPosts": "Hozircha maqolalar yo'q",
+    "backToBlog": "Blogga qaytish"
+  },
+  "booking": {
+    "title": "Navbatga yozilish",
+    "subtitle": "Formani to'ldiring, tez orada siz bilan bog'lanamiz",
+    "fullName": "To'liq ismingiz",
+    "phone": "Telefon raqamingiz",
+    "email": "Email (ixtiyoriy)",
+    "service": "Xizmat turi",
+    "selectService": "Xizmatni tanlang",
+    "date": "Sana",
+    "time": "Vaqt",
+    "message": "Qo'shimcha izoh (ixtiyoriy)",
+    "submit": "Navbatga yozilish",
+    "success": "So'rovingiz qabul qilindi! Tez orada siz bilan bog'lanamiz.",
+    "error": "Xatolik yuz berdi, qaytadan urinib ko'ring."
+  },
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Savollaringiz bormi? Bizga yozing yoki qo'ng'iroq qiling",
+    "addressLabel": "Manzil",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Ish vaqti",
+    "formTitle": "Xabar yuborish",
+    "namePlaceholder": "Ismingiz",
+    "contactPlaceholder": "Telefon yoki email",
+    "messagePlaceholder": "Xabaringiz",
+    "submit": "Yuborish",
+    "success": "Xabaringiz yuborildi, rahmat!",
+    "mapPlaceholder": "Google Xarita tez orada bu yerda ko'rinadi"
+  },
+  "faq": {
+    "title": "Ko'p so'raladigan savollar",
+    "subtitle": "Bemorlarimiz tomonidan tez-tez so'raladigan savollarga javoblar"
+  },
+  "admin": {
+    "loginTitle": "Admin panelga kirish",
+    "email": "Email",
+    "password": "Parol",
+    "login": "Kirish",
+    "logout": "Chiqish",
+    "dashboard": "Boshqaruv paneli",
+    "blogPosts": "Blog maqolalari",
+    "cases": "Bemor case'lari",
+    "appointments": "Navbat so'rovlari",
+    "messages": "Kontakt xabarlari",
+    "add": "Qo'shish",
+    "edit": "Tahrirlash",
+    "delete": "O'chirish",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "invalidCredentials": "Email yoki parol noto'g'ri"
+  },
+  "theme": {
+    "light": "Yorug'",
+    "dark": "Qorong'u"
+  }
+}

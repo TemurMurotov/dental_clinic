@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  locale      String    @default("uz")
+  title       String
+  excerpt     String
+  content     String
+  coverImage  String?
+  category    String
+  published   Boolean   @default(true)
+  publishedAt DateTime  @default(now())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Case {
+  id           String   @id @default(cuid())
+  locale       String   @default("uz")
+  title        String
+  description  String
+  category     String
+  beforeImage  String
+  afterImage   String
+  createdAt    DateTime @default(now())
+}
+
+model Testimonial {
+  id           String   @id @default(cuid())
+  patientName  String
+  rating       Int      @default(5)
+  text         String
+  videoUrl     String?
+  createdAt    DateTime @default(now())
+}
+
+model Appointment {
+  id             String   @id @default(cuid())
+  fullName       String
+  phone          String
+  email          String?
+  service        String
+  preferredDate  String
+  preferredTime  String
+  message        String?
+  status         String   @default("pending")
+  createdAt      DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  contact   String
+  message   String
+  createdAt DateTime @default(now())
+}
