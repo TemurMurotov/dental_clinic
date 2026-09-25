@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getSession } from '@/lib/auth';
 import { saveUploadedFile } from '@/lib/uploads';
@@ -29,6 +30,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     },
   });
 
+  revalidatePath('/', 'layout');
+
   return NextResponse.json({ ok: true });
 }
 
@@ -38,5 +41,6 @@ export async function DELETE(_request: NextRequest, { params }: { params: Promis
 
   const { id } = await params;
   await prisma.blogPost.delete({ where: { id } });
+  revalidatePath('/', 'layout');
   return NextResponse.json({ ok: true });
 }

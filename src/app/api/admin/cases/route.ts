@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getSession } from '@/lib/auth';
 import { saveUploadedFile } from '@/lib/uploads';
@@ -28,6 +29,8 @@ export async function POST(request: NextRequest) {
       afterImage,
     },
   });
+
+  revalidatePath('/', 'layout');
 
   return NextResponse.json({ id: item.id }, { status: 201 });
 }
