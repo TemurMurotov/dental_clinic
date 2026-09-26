@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+              className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
             />
           </div>
           <div>
@@ -61,7 +61,7 @@ export default function AdminLoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+              className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
             />
           </div>
           {error && <p className="text-sm text-warning">{error}</p>}

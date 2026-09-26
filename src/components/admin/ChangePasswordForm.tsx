@@ -55,7 +55,7 @@ export function ChangePasswordForm() {
           required
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
       <div>
@@ -66,7 +66,7 @@ export function ChangePasswordForm() {
           minLength={6}
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
       <div>
@@ -77,7 +77,7 @@ export function ChangePasswordForm() {
           minLength={6}
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 

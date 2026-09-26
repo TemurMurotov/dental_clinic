@@ -10,7 +10,7 @@ export default async function AdminMessagesPage() {
       <div className="mt-6 space-y-4">
         {messages.map((m) => (
           <div key={m.id} className="rounded-2xl border border-border bg-surface-elevated p-5">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
               <div className="font-medium text-foreground">{m.name}</div>
               <div className="text-xs text-muted">{new Date(m.createdAt).toLocaleString()}</div>
             </div>

@@ -9,7 +9,7 @@ export default async function AdminAppointmentsPage() {
       <h1 className="text-2xl font-bold text-foreground">Navbat so&apos;rovlari</h1>
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface-elevated">
-        <table className="w-full text-sm">
+        <table className="w-full min-w-[640px] text-sm">
           <thead className="border-b border-border bg-surface text-left text-muted">
             <tr>
               <th className="px-4 py-3 font-medium">Bemor</th>

@@ -8,7 +8,7 @@ export default async function AdminBlogListPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-bold text-foreground">Blog maqolalari</h1>
         <Link
           href="/admin/blog/new"
@@ -18,13 +18,13 @@ export default async function AdminBlogListPage() {
         </Link>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-surface-elevated">
+      <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface-elevated">
         <table className="w-full text-sm">
           <thead className="border-b border-border bg-surface text-left text-muted">
             <tr>
               <th className="px-4 py-3 font-medium">Sarlavha</th>
-              <th className="px-4 py-3 font-medium">Til</th>
-              <th className="px-4 py-3 font-medium">Kategoriya</th>
+              <th className="hidden px-4 py-3 font-medium sm:table-cell">Til</th>
+              <th className="hidden px-4 py-3 font-medium sm:table-cell">Kategoriya</th>
               <th className="px-4 py-3 font-medium">Holat</th>
               <th className="px-4 py-3"></th>
             </tr>
@@ -32,10 +32,15 @@ export default async function AdminBlogListPage() {
           <tbody>
             {posts.map((post) => (
               <tr key={post.id} className="border-b border-border last:border-0">
-                <td className="px-4 py-3 font-medium text-foreground">{post.title}</td>
-                <td className="px-4 py-3 uppercase text-muted">{post.locale}</td>
-                <td className="px-4 py-3 text-muted">{post.category}</td>
                 <td className="px-4 py-3">
+                  <div className="font-medium text-foreground">{post.title}</div>
+                  <div className="mt-0.5 text-xs text-muted sm:hidden">
+                    <span className="uppercase">{post.locale}</span> · {post.category}
+                  </div>
+                </td>
+                <td className="hidden px-4 py-3 uppercase text-muted sm:table-cell">{post.locale}</td>
+                <td className="hidden px-4 py-3 text-muted sm:table-cell">{post.category}</td>
+                <td className="whitespace-nowrap px-4 py-3">
                   <span className={post.published ? 'text-success' : 'text-muted'}>
                     {post.published ? "e'lon qilingan" : 'qoralama'}
                   </span>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
+import { compressImagesInFormData } from '@/lib/compress-image';
 import type { Case } from '@prisma/client';
 
 export function CaseForm({ item }: { item?: Case }) {
@@ -16,12 +17,17 @@ export function CaseForm({ item }: { item?: Case }) {
     setError('');
 
     const formData = new FormData(e.currentTarget);
+    await compressImagesInFormData(formData, ['beforeImage', 'afterImage']);
     const url = item ? `/api/admin/cases/${item.id}` : '/api/admin/cases';
     const res = await fetch(url, { method: 'POST', body: formData });
 
     setLoading(false);
     if (!res.ok) {
-      setError('Xatolik yuz berdi, maydonlarni tekshiring');
+      setError(
+        res.status === 413
+          ? 'Rasm hajmi juda katta, kichikroq rasm tanlang'
+          : 'Xatolik yuz berdi, maydonlarni tekshiring',
+      );
       return;
     }
 
@@ -38,7 +44,7 @@ export function CaseForm({ item }: { item?: Case }) {
             name="title"
             required
             defaultValue={item?.title}
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           />
         </div>
         <div>
@@ -46,7 +52,7 @@ export function CaseForm({ item }: { item?: Case }) {
           <select
             name="locale"
             defaultValue={item?.locale || 'uz'}
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           >
             <option value="uz">O&apos;zbek</option>
             <option value="en">English</option>
@@ -62,7 +68,7 @@ export function CaseForm({ item }: { item?: Case }) {
           required
           defaultValue={item?.category}
           placeholder="masalan: Estetik tiklash"
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -73,7 +79,7 @@ export function CaseForm({ item }: { item?: Case }) {
           required
           rows={3}
           defaultValue={item?.description}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -87,7 +93,7 @@ export function CaseForm({ item }: { item?: Case }) {
             name="beforeImage"
             accept="image/*"
             required={!item}
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           />
         </div>
         <div>
@@ -99,7 +105,7 @@ export function CaseForm({ item }: { item?: Case }) {
             name="afterImage"
             accept="image/*"
             required={!item}
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           />
         </div>
       </div>

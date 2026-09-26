@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
+import { compressImagesInFormData } from '@/lib/compress-image';
 import type { BlogPost } from '@prisma/client';
 
 export function BlogPostForm({ post }: { post?: BlogPost }) {
@@ -16,12 +17,17 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
     setError('');
 
     const formData = new FormData(e.currentTarget);
+    await compressImagesInFormData(formData, ['coverImage']);
     const url = post ? `/api/admin/blog/${post.id}` : '/api/admin/blog';
     const res = await fetch(url, { method: 'POST', body: formData });
 
     setLoading(false);
     if (!res.ok) {
-      setError('Xatolik yuz berdi, maydonlarni tekshiring');
+      setError(
+        res.status === 413
+          ? 'Rasm hajmi juda katta, kichikroq rasm tanlang'
+          : 'Xatolik yuz berdi, maydonlarni tekshiring',
+      );
       return;
     }
 
@@ -39,7 +45,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
             required
             defaultValue={post?.slug}
             placeholder="masalan-shu-tarzda"
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           />
         </div>
         <div>
@@ -47,7 +53,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           <select
             name="locale"
             defaultValue={post?.locale || 'uz'}
-            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
           >
             <option value="uz">O&apos;zbek</option>
             <option value="en">English</option>
@@ -62,7 +68,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           name="title"
           required
           defaultValue={post?.title}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -73,7 +79,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           required
           defaultValue={post?.category}
           placeholder="masalan: Preventive Care"
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -84,7 +90,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           required
           rows={2}
           defaultValue={post?.excerpt}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -95,7 +101,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           required
           rows={10}
           defaultValue={post?.content}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 
@@ -107,7 +113,7 @@ export function BlogPostForm({ post }: { post?: BlogPost }) {
           type="file"
           name="coverImage"
           accept="image/*"
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm outline-none focus:border-primary"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-base outline-none sm:text-sm focus:border-primary"
         />
       </div>
 

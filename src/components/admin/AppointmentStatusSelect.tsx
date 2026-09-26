@@ -32,7 +32,7 @@ export function AppointmentStatusSelect({ id, status }: { id: string; status: st
       value={value}
       onChange={handleChange}
       disabled={loading}
-      className={`rounded-lg border border-border bg-background px-2.5 py-1.5 text-sm font-medium outline-none ${statusStyles[value]}`}
+      className={`rounded-lg border border-border bg-background px-2.5 py-1.5 text-base font-medium outline-none sm:text-sm ${statusStyles[value]}`}
     >
       <option value="pending">kutilmoqda</option>
       <option value="confirmed">tasdiqlangan</option>
